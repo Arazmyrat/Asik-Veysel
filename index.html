@@ -4,10 +4,10 @@
     <title>Âşık Veysel</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="dark">
-    <header>
+  <body id="container">
+    <header style="position: relative;">
       
-      <button>Light</button>
+      <button onclick="switchMode()" style="position: fixed;  top: 10px;right: 10px; z-index:1 ;" >Switch</button>
       
       <h1 class="green large-font" id="first-heading" style="color: black" >
         Âşık Veysel
@@ -110,7 +110,7 @@
 
       <section id="selected_works">
         <h2 class="green">Selected Works</h2>
-        <a href="#navigation">Ana Menu'ye Git</a>
+       
          <ul>
           <li>Anlatamam derdimi (5:24)</li>
           <li>Arasam seni gül ilen (4:18)</li>
@@ -155,6 +155,14 @@
     <footer>
       &copy; 2020 - <a href="./about-us.html">Designed by Bootcamp Students</a>
       <a href="#">Sayfa basina don</a>
+      <a href="#navigation" style="position: fixed; bottom:20px; right: 20px;z-index: 10;">Ana Menu'ye Git</a>
+
     </footer>
+   
+   <script>
+     function switchMode() {
+      document.getElementById('container').classList.toggle('dark');
+     }
+   </script>
   </body>
 </html>
